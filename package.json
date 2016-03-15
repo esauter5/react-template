@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "test": "eslint app/",
+    "test": "eslint app",
     "build": "webpack -p"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.2",
     "react-transform-hmr": "^1.0.4",
     "webpack": "^1.12.14",
