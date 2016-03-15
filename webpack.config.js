@@ -1,17 +1,21 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  entry: "./main.js",
+  entry: path.join(__dirname, 'app/index.js'),
 
   output: {
-    path: __dirname,
-    filename: "bundle.js"
+    path: path.join(__dirname, 'dist/'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
 
+  devtool: 'eval-source-map',
   devServer: { hot: true },
+
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" }
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel" }
     ]
   },
   plugins: [
